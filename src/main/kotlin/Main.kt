@@ -6,6 +6,7 @@ fun main() {
     printStringLength(null)
     //println("Concatenation: " + concatenate("hello", null))
     exercise1()
+    exercise2()
 }
 
 // TODO: 1.- Write a function called exercise1()
@@ -21,13 +22,23 @@ fun exercise1(){
 }
 
 // TODO: 2.- Uncomment this function:
-/* fun exercise2() {
+fun exercise2() {
     var month = 1
     while(month != 0) {
         println("Enter the number of the month (0 to finish)")
         val monthStr = readLine()
         if (month > 0 && month <= 12) {
+
             month = monthStr!!.toInt() // Don't worry about the !! yet. We will study it later
+            when (month) {
+                28 -> print("february  ")
+                29 -> print("february leap  ")
+                30 -> print("short month  ")
+                31 -> print("long month  ")
+                else -> { // Note the block
+                    print("there is no month")
+                }
+            }
             // TODO: 2 write the number of days that has that month, using the "when" structure
             // You can read about it here:
             // https://kotlinlang.org/docs/reference/control-flow.html
@@ -35,7 +46,7 @@ fun exercise1(){
             // Invoke the function from main()
         }
     }
-} */
+}
 
 // TODO: 3 Write a function called exercise3()
 // that accepts a  number and returns a String
